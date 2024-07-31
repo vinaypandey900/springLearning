@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example.dto</groupId>
-	<artifactId>dto</artifactId>
+	<artifactId>Dto-learning</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>GroceryInventory-1</name>
+	<name>Dto-learning</name>
 	<description>Learning about dto</description>
 	<url/>
 	<licenses>
