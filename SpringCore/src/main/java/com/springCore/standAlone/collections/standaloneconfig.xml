@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns:context="http://www.springframework.org/schema/context" 
+         xmlns:p="http://www.springframework.org/schema/p"
+         xmlns:util="http://www.springframework.org/schema/util"
+         xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util.xsd
+		"> 
+     
+      <!-- we use util schema -->
+      <util:list list-class="java.util.LinkedList" id="myBestFriend">
+         <value>Aman</value>
+         <value>Ajay</value>
+         <value>Sanjay</value>
+      </util:list>
+      
+      <util:properties id="prop">
+        <prop key="Driver"> com.oracle.jdbc.Driver</prop>
+        <prop key="Website"> www.oracle.com</prop>
+      </util:properties>
+      
+      <util:map map-class="java.util.HashMap" id="fees">
+         <entry key="java core" value="8000"/>
+         <entry key="spring Framework" value="5000"/>
+      </util:map>
+      
+      
+       <bean class="com.springCore.standAlone.collections.person" name="person1">
+        
+        <property name="friends" ref="myBestFriend"></property>
+        <property name="feeStructre" ref="fees"></property>
+        <property name="properties" ref="prop"></property>
+        <!--OR  -->
+        <!--  <property name="friends">
+            <ref bean="myBestFriend"/>
+         </property> -->
+       </bean> 
+       
+     
+</beans>
