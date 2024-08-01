@@ -19,7 +19,7 @@ public class UserController {
 	
 	@GetMapping("/getAll")
 	public List<UserLocationDto> getAllUser(){
-		return userService.getAllUserLocations();
+		return userService.getAllUsersLocations();
 	}
 
 }

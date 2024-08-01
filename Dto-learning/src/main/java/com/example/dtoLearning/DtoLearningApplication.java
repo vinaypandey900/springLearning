@@ -1,9 +1,11 @@
 package com.example.dtoLearning;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 import com.example.dtoLearning.dao.LocationRepo;
 import com.example.dtoLearning.dao.UserRepo;
@@ -13,6 +15,11 @@ import com.example.dtoLearning.model.User;
 @SpringBootApplication
 public class DtoLearningApplication implements CommandLineRunner {
 
+    @Bean
+    ModelMapper modelMapper(){
+		return new ModelMapper();
+	}
+	
 	public static void main(String[] args) {
 		SpringApplication.run(DtoLearningApplication.class, args);
 	}
@@ -22,6 +29,7 @@ public class DtoLearningApplication implements CommandLineRunner {
 	
 	@Autowired
 	UserRepo userRepo;
+	
 	
 	@Override
 	public void run(String... args) throws Exception {
