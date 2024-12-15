@@ -92,7 +92,6 @@ public class UserService {
 		return userLocationDto;
 	}
 	
-	
 	private User convertDtoToEntity(UserLocationDto userLocationDTO){
         modelMapper.getConfiguration()
                 .setMatchingStrategy(MatchingStrategies.LOOSE);
