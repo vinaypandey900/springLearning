@@ -2,15 +2,18 @@ package com.example.securityMainClass.model;
 
 public class UserModel {
 
+	private int userId;
 	private String username;
 	private String password;
 	private String email;
-			
-	public UserModel(String username, String password, String email) {
+
+	public UserModel(int userId, String username, String password, String email) {
 		super();
+		this.userId=userId;
 		this.username = username;
 		this.password = password;
 		this.email = email;
+
 	}
 	public String getUsername() {
 		return username;
@@ -30,10 +33,15 @@ public class UserModel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 
 	@Override
 	public String toString() {
-		return "UserModel [username=" + username + ", password=" + password + ", email=" + email + "]";
+		return "UserModel [userId=" +userId +", username=" + username + ", password=" + password + ", email=" + email + "]";
 	}
 }

@@ -14,9 +14,9 @@ public class UserService {
 
 	// to add all the users
 	public UserService() {
-		list.add(new UserModel("abc1", "abc1", "abc1@gmail.com"));
-		list.add(new UserModel("abc2", "abc2", "abc2@gmail.com"));
-		list.add(new UserModel("abc3", "abc3", "abc3@gmail.com"));
+		list.add(new UserModel(1,"abc1", "abc1", "abc1@gmail.com"));
+		list.add(new UserModel(2,"abc2", "abc2", "abc2@gmail.com"));
+		list.add(new UserModel(3,"abc3", "abc3", "abc3@gmail.com"));
 	}
 
 	// to get all users details
@@ -31,10 +31,15 @@ public class UserService {
 				   .findAny()
 				   .orElseThrow(() -> new RuntimeException("No username found"));
 	}
-	
+
 	//add one users details
 	public UserModel addSingleUser(UserModel user) {
 		 list.add(user);
 		 return user;
+	}
+
+	// to delete one user details
+	public UserModel deleteOneUser(int id) {
+		return list.remove(id);
 	}
 }
