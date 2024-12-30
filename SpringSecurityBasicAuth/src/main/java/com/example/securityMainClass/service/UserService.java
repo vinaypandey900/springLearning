@@ -40,6 +40,14 @@ public class UserService {
 
 	// to delete one user details
 	public UserModel deleteOneUser(int id) {
-		return list.remove(id);
+		 for(int i=0;i<list.size();i++) {
+			 if(list.get(i).getUserId()==id) {
+				 UserModel user=list.get(i);
+				 list.remove(i);
+				 return user;
+			 }
+		 }
+		
+		return null;
 	}
 }
